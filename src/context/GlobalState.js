@@ -7,8 +7,6 @@ const initialState = {
     transactions: []
 }
 
-
-
 //Create context
 
 export const GlobalContext = createContext (initialState)
@@ -35,7 +33,6 @@ export const GlobalProvider = ({children}) => {
         });
     }
 
-
     return ( 
         <GlobalContext.Provider value = {{
             transactions: state.transactions,
@@ -45,6 +42,4 @@ export const GlobalProvider = ({children}) => {
             {children}
         </GlobalContext.Provider>
     )
-
-
 }
